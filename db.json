@@ -10,5 +10,63 @@
       "username": "user",
       "password": "password"
     }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Tornillo",
+      "cantidad": 100,
+      "precio": 5.00
+    },
+    {
+      "id": 2,
+      "nombre": "Martillo",
+      "cantidad": 50,
+      "precio": 15.00
+    }
+  ],
+  "compras": [
+    {
+      "id": 1,
+      "proveedor": "Proveedor A",
+      "producto": "Tornillo",
+      "cantidad": 100,
+      "fechaCompra": "2023-07-13"
+    },
+    {
+      "id": 2,
+      "proveedor": "Proveedor B",
+      "producto": "Martillo",
+      "cantidad": 30,
+      "fechaCompra": "2023-07-14"
+    }
+  ],
+  "ventas": [
+    {
+      "id": 1,
+      "cliente": "Cliente X",
+      "producto": "Tornillo",
+      "cantidad": 50,
+      "fechaVenta": "2023-07-15"
+    },
+    {
+      "id": 2,
+      "cliente": "Cliente Y",
+      "producto": "Martillo",
+      "cantidad": 10,
+      "fechaVenta": "2023-07-16"
+    }
+  ],
+  "mantenimientos": [
+    {
+      "id": 1,
+      "descripcion": "Revisión de inventario",
+      "fecha": "2023-07-12"
+    },
+    {
+      "id": 2,
+      "descripcion": "Actualización de precios",
+      "fecha": "2023-07-14"
+    }
   ]
 }

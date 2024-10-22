@@ -1,0 +1,29 @@
+/* Table.module.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tableHeader {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  .tableCell {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .tableRowEven {
+    background-color: #f9f9f9;
+  }
+  
+  .tableRowHover:hover {
+    background-color: #f1f1f1;
+  }
+  

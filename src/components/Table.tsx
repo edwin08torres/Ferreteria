@@ -1,46 +1,41 @@
 import React from 'react';
 import styles from '../styles/Table.module.css';
 
-// Definimos la interfaz para cada fila de datos en la tabla
-interface TableRow {
-  id: number;
-  name: string;
-  phone: string;
-  email: string;
-  date: string;
+interface TableColumn {
+  header: string;
+  accessor: string; // clave para acceder a los datos
 }
 
-// Definimos la interfaz de las propiedades (props)
 interface TableProps {
-  moduleName: string; // Nombre del módulo actual
+  columns: TableColumn[]; // Array de columnas dinámicas
+  data: any[]; // Datos dinámicos según las columnas
 }
 
-const Table: React.FC<TableProps> = ({ moduleName }) => {
-  // Puedes cargar datos específicos del módulo aquí
-  const data: TableRow[] = [
-    { id: 1, name: 'Dionisio Torrez', phone: '8774901', email: 'hernandez@gmail.com', date: '13/07/2020' },
-    // Más datos según el módulo
-  ];
-
+const Table: React.FC<TableProps> = ({ columns, data }) => {
   return (
     <table className={styles.table}>
-      <thead>
+      <thead className={styles.tableHeader}>
         <tr>
-          <th>Cédula/Ruc</th>
-          <th>Nombre</th>
-          <th>Teléfono</th>
-          <th>Correo</th>
-          <th>Fecha Ingreso</th>
+          {columns.map((column) => (
+            <th key={column.accessor} className={styles.tableCell}>
+              {column.header}
+            </th>
+          ))}
         </tr>
       </thead>
       <tbody>
-        {data.map((row) => (
-          <tr key={row.id}>
-            <td>{row.id}</td>
-            <td>{row.name}</td>
-            <td>{row.phone}</td>
-            <td>{row.email}</td>
-            <td>{row.date}</td>
+        {data.map((row, rowIndex) => (
+          <tr
+            key={rowIndex}
+            className={`${rowIndex % 2 === 0 ? styles.tableRowEven : ''} ${
+              styles.tableRowHover
+            }`}
+          >
+            {columns.map((column) => (
+              <td key={column.accessor} className={styles.tableCell}>
+                {row[column.accessor]}
+              </td>
+            ))}
           </tr>
         ))}
       </tbody>
