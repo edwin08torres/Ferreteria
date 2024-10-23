@@ -1,40 +1,40 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123456"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "user",
       "password": "password"
     }
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Tornillo",
       "cantidad": 100,
-      "precio": 5.00
+      "precio": 5
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Martillo",
       "cantidad": 50,
-      "precio": 15.00
+      "precio": 15
     }
   ],
   "compras": [
     {
-      "id": 1,
+      "id": "1",
       "proveedor": "Proveedor A",
       "producto": "Tornillo",
       "cantidad": 100,
       "fechaCompra": "2023-07-13"
     },
     {
-      "id": 2,
+      "id": "2",
       "proveedor": "Proveedor B",
       "producto": "Martillo",
       "cantidad": 30,
@@ -43,29 +43,37 @@
   ],
   "ventas": [
     {
-      "id": 1,
+      "id": "1",
       "cliente": "Cliente X",
       "producto": "Tornillo",
       "cantidad": 50,
       "fechaVenta": "2023-07-15"
     },
     {
-      "id": 2,
+      "id": "2",
       "cliente": "Cliente Y",
       "producto": "Martillo",
-      "cantidad": 10,
+      "cantidad": 12,
       "fechaVenta": "2023-07-16"
     }
   ],
   "mantenimientos": [
     {
-      "id": 1,
+      "id": "1",
       "descripcion": "Revisión de inventario",
+      "cedulaRuc": "001-020202-1010P",
+      "nombre": "Juan Pérez",
+      "telefono": "555-1234",
+      "correo": "juan.perez@example.com",
       "fecha": "2023-07-12"
     },
     {
-      "id": 2,
+      "id": "2",
       "descripcion": "Actualización de precios",
+      "cedulaRuc": "001-020202-1010P",
+      "nombre": "María López",
+      "telefono": "555-5678",
+      "correo": "maria.lopez@example.com",
       "fecha": "2023-07-14"
     }
   ]

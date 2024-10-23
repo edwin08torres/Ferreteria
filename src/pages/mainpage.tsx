@@ -1,37 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/MainPage.module.css'; // Archivo CSS para el estilo
-import NavBar from '../components/NavBar'; // Componente de navegación
-import Button from '../components/Button'; // Componente reutilizable para los botones de acción
+import styles from '../styles/MainPage.module.css';
+import NavBar from '../components/NavBar';
+import Button from '../components/Button';
 import MantenimientoSubModule from '../components/SubModules/MantenimientoSubModule';
 import ProductoSubModule from '../components/SubModules/ProductoSubModule';
 import VentaSubModule from '../components/SubModules/VentaSubmodule';
 import CompraSubModule from '../components/SubModules/CompraSubmodule';
+import Modal from '../components/Modal';
 
-// Definir tipo de módulo
 type ModuleType = 'Mantenimiento' | 'Producto' | 'Compra' | 'Venta';
 
 const MainPage = () => {
   const [username, setUsername] = useState('');
-  const [activeModule, setActiveModule] = useState<ModuleType>('Mantenimiento'); // Submódulo activo
+  const [activeModule, setActiveModule] = useState<ModuleType>('Mantenimiento');
+  const [isModalOpen, setModalOpen] = useState(false);
   const router = useRouter();
 
-  // Lista de módulos/submódulos
   const modules: ModuleType[] = ['Mantenimiento', 'Producto', 'Compra', 'Venta'];
-
-  useEffect(() => {
-    const storedUsername = localStorage.getItem('username');
-    if (storedUsername) {
-      setUsername(storedUsername);
-    } else {
-      router.push('/login');
-    }
-  }, [router]);
 
   const handleLogout = () => {
     document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     localStorage.removeItem('username');
     router.push('/login');
+  };
+
+  const handleNewRecord = () => {
+    setModalOpen(true); // Abrir el modal para el nuevo registro
   };
 
   const renderModuleContent = (activeModule: ModuleType) => {
@@ -52,7 +47,6 @@ const MainPage = () => {
   return (
     <div className={styles.container}>
       <NavBar username={username} onLogout={handleLogout} />
-
       <div className={styles.moduleSelector}>
         {modules.map((module) => (
           <Button
@@ -65,24 +59,16 @@ const MainPage = () => {
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.titulomodulo}>{activeModule}</h1>
-        <input
-          type="text"
-          placeholder={`Buscar en ${activeModule}`}
-          className={styles.searchInput}
-        />
-        <div className={styles.actions}>
-          <Button
-            label="Nuevo"
-            onClick={() => console.log(`Crear nuevo registro en ${activeModule}`)}
-          />
-          <Button
-            label="Editar"
-            onClick={() => console.log(`Editar registro en ${activeModule}`)}
-          />
-        </div>
-
+      <h1 className={styles.titulomodulo}>{activeModule}</h1>
         {renderModuleContent(activeModule)}
+
+        {isModalOpen && (
+          <Modal onClose={() => setModalOpen(false)}>
+            {/* Aquí puedes pasar el submódulo activo para saber qué formulario renderizar */}
+            <h2>Nuevo {activeModule}</h2>
+            {/* Formulario de creación va aquí dependiendo del submódulo */}
+          </Modal>
+        )}
       </div>
     </div>
   );
