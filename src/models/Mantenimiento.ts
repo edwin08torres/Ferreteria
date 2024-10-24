@@ -1,5 +1,6 @@
 // src/models/mantenimiento.ts
 export interface Mantenimiento {
+    id: number;
     cedulaRuc: string;
     nombre: string;
     telefono:string;

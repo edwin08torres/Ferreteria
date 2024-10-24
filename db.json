@@ -16,13 +16,19 @@
       "id": "1",
       "nombre": "Tornillo",
       "cantidad": 100,
-      "precio": 5
+      "precio": 25
     },
     {
       "id": "2",
       "nombre": "Martillo",
       "cantidad": 50,
       "precio": 15
+    },
+    {
+      "id": 3,
+      "nombre": "Zinc",
+      "cantidad": 100,
+      "precio": 100
     }
   ],
   "compras": [
@@ -69,8 +75,7 @@
     },
     {
       "id": "2",
-      "descripcion": "Actualización de precios",
-      "cedulaRuc": "001-020202-1010P",
+      "cedulaRuc": "007-020202-1010X",
       "nombre": "María López",
       "telefono": "555-5678",
       "correo": "maria.lopez@example.com",
