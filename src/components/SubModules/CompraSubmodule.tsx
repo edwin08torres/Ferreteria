@@ -116,6 +116,7 @@ const CompraSubModule = () => {
           placeholder="Buscar en Compras"
           value={busqueda}
           onChange={(e) => setBusqueda(e.target.value)}
+          style={{ padding: "8px", fontSize: "14px", width: "200px" }}
           className="search-input"
         />
         <button onClick={handleNuevo}>Nuevo</button>

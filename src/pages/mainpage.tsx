@@ -8,6 +8,7 @@ import ProductoSubModule from '../components/SubModules/ProductoSubModule';
 import VentaSubModule from '../components/SubModules/VentaSubmodule';
 import CompraSubModule from '../components/SubModules/CompraSubmodule';
 import Modal from '../components/Modal';
+import ChatbotModal from '@/components/ChatBotResponse';
 
 type ModuleType = 'Mantenimiento' | 'Producto' | 'Compra' | 'Venta';
 
@@ -68,7 +69,10 @@ const MainPage = () => {
             <h2>Nuevo {activeModule}</h2>
             {/* Formulario de creación va aquí dependiendo del submódulo */}
           </Modal>
+          
         )}
+
+        <ChatbotModal></ChatbotModal>
       </div>
     </div>
   );
