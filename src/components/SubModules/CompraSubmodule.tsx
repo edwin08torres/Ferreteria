@@ -6,7 +6,7 @@ import {
   crearCompra,
   editarCompra,
   eliminarCompra,
-} from "../../pages/Api/compras";
+} from "../../pages/api/compras";
 import { Compra } from "../../models/Compra";
 import styles from "../../styles/Modal.module.css"; // Estilos para el modal
 

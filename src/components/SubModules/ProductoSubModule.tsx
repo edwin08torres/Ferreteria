@@ -6,7 +6,7 @@ import {
   editarProducto,
   eliminarProducto,
   obtenerProductos,
-} from "../../pages/Api/producto"; // API para obtener los productos
+} from "../../pages/api/producto"; // API para obtener los productos
 import { Producto } from "@/models/producto";
 import styles from "../../styles/Modal.module.css"; // Estilos para el modal
 

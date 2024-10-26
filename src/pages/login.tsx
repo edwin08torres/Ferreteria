@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/LoginPage.module.css"; // Importamos el CSS module para login
-import { loginUser } from "./Api/users"; // Importamos la función loginUser
+import { loginUser } from "./api/users"; // Importamos la función loginUser
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");

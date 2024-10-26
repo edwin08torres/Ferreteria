@@ -6,7 +6,7 @@ import {
   crearVenta,
   editarVenta,
   eliminarVenta,
-} from "../../pages/Api/ventas";
+} from "../../pages/api/ventas";
 import { Venta } from "../../models/venta";
 import styles from "../../styles/Modal.module.css"; // Estilos para el modal
 

@@ -6,7 +6,7 @@ import {
   crearMantenimiento,
   editarMantenimiento,
   eliminarMantenimiento,
-} from "../../pages/Api/mantenimiento";
+} from "../../pages/api/mantenimiento";
 import { Mantenimiento } from "../../models/Mantenimiento";
 import styles from "../../styles/Modal.module.css";
 
