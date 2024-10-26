@@ -9,6 +9,16 @@
       "id": "2",
       "username": "user",
       "password": "password"
+    },
+    {
+      "id": "3",
+      "username": "guest",
+      "password": "guest123"
+    },
+    {
+      "id": "4",
+      "username": "manager",
+      "password": "manage2023"
     }
   ],
   "productos": [
@@ -25,10 +35,34 @@
       "precio": 15
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Zinc",
       "cantidad": 100,
       "precio": 100
+    },
+    {
+      "id": "4",
+      "nombre": "Destornillador",
+      "cantidad": 75,
+      "precio": 20
+    },
+    {
+      "id": "5",
+      "nombre": "Taladro",
+      "cantidad": 20,
+      "precio": 300
+    },
+    {
+      "id": "6",
+      "nombre": "Llave inglesa",
+      "cantidad": 40,
+      "precio": 45
+    },
+    {
+      "id": "7",
+      "nombre": "Clavos",
+      "cantidad": 100,
+      "precio": 10
     }
   ],
   "compras": [
@@ -45,9 +79,30 @@
       "producto": "Martillo",
       "cantidad": 30,
       "fechaCompra": "2023-07-14"
+    },
+    {
+      "id": "3",
+      "proveedor": "Proveedor C",
+      "producto": "Zinc",
+      "cantidad": 20,
+      "fechaCompra": "2023-07-15"
+    },
+    {
+      "id": "4",
+      "proveedor": "Proveedor A",
+      "producto": "Llave inglesa",
+      "cantidad": 15,
+      "fechaCompra": "2023-07-16"
+    },
+    {
+      "id": "5",
+      "proveedor": "Proveedor D",
+      "producto": "Clavos",
+      "cantidad": 150,
+      "fechaCompra": "2023-07-17"
     }
   ],
-  "ventas": [
+ "ventas": [
     {
       "id": "1",
       "cliente": "Cliente X",
@@ -61,12 +116,151 @@
       "producto": "Martillo",
       "cantidad": 12,
       "fechaVenta": "2023-07-16"
+    },
+    {
+      "id": "3",
+      "cliente": "Cliente Z",
+      "producto": "Zinc",
+      "cantidad": 5,
+      "fechaVenta": "2023-07-18"
+    },
+    {
+      "id": "4",
+      "cliente": "Cliente W",
+      "producto": "Destornillador",
+      "cantidad": 10,
+      "fechaVenta": "2023-07-19"
+    },
+    {
+      "id": "5",
+      "cliente": "Cliente V",
+      "producto": "Llave inglesa",
+      "cantidad": 8,
+      "fechaVenta": "2023-07-20"
+    },
+    {
+      "id": "6",
+      "cliente": "Cliente X",
+      "producto": "Clavos",
+      "cantidad": 60,
+      "fechaVenta": "2023-07-21"
+    },
+    {
+      "id": "7",
+      "cliente": "Cliente A",
+      "producto": "Tornillo",
+      "cantidad": 20,
+      "fechaVenta": "2023-07-21"
+    },
+    {
+      "id": "8",
+      "cliente": "Cliente B",
+      "producto": "Martillo",
+      "cantidad": 15,
+      "fechaVenta": "2023-07-21"
+    },
+    {
+      "id": "9",
+      "cliente": "Cliente C",
+      "producto": "Taladro",
+      "cantidad": 4,
+      "fechaVenta": "2023-07-22"
+    },
+    {
+      "id": "10",
+      "cliente": "Cliente D",
+      "producto": "Zinc",
+      "cantidad": 7,
+      "fechaVenta": "2023-07-23"
+    },
+    {
+      "id": "11",
+      "cliente": "Cliente E",
+      "producto": "Destornillador",
+      "cantidad": 20,
+      "fechaVenta": "2023-07-23"
+    },
+    {
+      "id": "12",
+      "cliente": "Cliente F",
+      "producto": "Llave inglesa",
+      "cantidad": 5,
+      "fechaVenta": "2023-07-24"
+    },
+    {
+      "id": "13",
+      "cliente": "Cliente G",
+      "producto": "Clavos",
+      "cantidad": 15,
+      "fechaVenta": "2023-07-25"
+    },
+    {
+      "id": "14",
+      "cliente": "Cliente H",
+      "producto": "Tornillo",
+      "cantidad": 30,
+      "fechaVenta": "2023-10-15"
+    },
+    {
+      "id": "15",
+      "cliente": "Cliente I",
+      "producto": "Martillo",
+      "cantidad": 10,
+      "fechaVenta": "2023-10-16"
+    },
+    {
+      "id": "16",
+      "cliente": "Cliente J",
+      "producto": "Zinc",
+      "cantidad": 12,
+      "fechaVenta": "2023-10-17"
+    },
+    {
+      "id": "17",
+      "cliente": "Cliente K",
+      "producto": "Destornillador",
+      "cantidad": 7,
+      "fechaVenta": "2023-10-18"
+    },
+    {
+      "id": "18",
+      "cliente": "Cliente L",
+      "producto": "Llave inglesa",
+      "cantidad": 11,
+      "fechaVenta": "2023-10-19"
+    },
+    {
+      "id": "19",
+      "cliente": "Cliente M",
+      "producto": "Clavos",
+      "cantidad": 20,
+      "fechaVenta": "2023-10-20"
+    },
+    {
+      "id": "20",
+      "cliente": "Cliente N",
+      "producto": "Tornillo",
+      "cantidad": 25,
+      "fechaVenta": "2023-10-20"
+    },
+    {
+      "id": "21",
+      "cliente": "Cliente O",
+      "producto": "Martillo",
+      "cantidad": 13,
+      "fechaVenta": "2024-10-24"
+    },
+    {
+      "id": "22",
+      "cliente": "Cliente P",
+      "producto": "Taladro",
+      "cantidad": 9,
+      "fechaVenta": "2024-10-25"
     }
   ],
   "mantenimientos": [
     {
       "id": "1",
-      "descripcion": "Revisión de inventario",
       "cedulaRuc": "001-020202-1010P",
       "nombre": "Juan Pérez",
       "telefono": "555-1234",
@@ -80,6 +274,54 @@
       "telefono": "555-5678",
       "correo": "maria.lopez@example.com",
       "fecha": "2023-07-14"
+    },
+    {
+      "id": "3",
+      "cedulaRuc": "010-010101-2020Y",
+      "nombre": "Carlos Herrera",
+      "telefono": "555-7890",
+      "correo": "carlos.herrera@example.com",
+      "fecha": "2023-07-18"
+    },
+    {
+      "id": "4",
+      "cedulaRuc": "015-040404-3030Z",
+      "nombre": "Luis Castillo",
+      "telefono": "555-2345",
+      "correo": "luis.castillo@example.com",
+      "fecha": "2023-07-20"
+    },
+    {
+      "id": "5",
+      "cedulaRuc": "025-030303-4040W",
+      "nombre": "Ana Fernández",
+      "telefono": "555-6789",
+      "correo": "ana.fernandez@example.com",
+      "fecha": "2023-07-22"
+    },
+    {
+      "id": "6",
+      "cedulaRuc": "035-050505-5050T",
+      "nombre": "Fernando García",
+      "telefono": "555-1011",
+      "correo": "fernando.garcia@example.com",
+      "fecha": "2023-07-23"
+    },
+    {
+      "id": "7",
+      "cedulaRuc": "045-060606-6060Q",
+      "nombre": "Lucía Torres",
+      "telefono": "555-1213",
+      "correo": "lucia.torres@example.com",
+      "fecha": "2023-07-24"
+    },
+    {
+      "id": "8",
+      "cedulaRuc": "055-070707-7070K",
+      "nombre": "Marcelo Díaz",
+      "telefono": "555-1415",
+      "correo": "marcelo.diaz@example.com",
+      "fecha": "2023-07-25"
     }
   ]
 }
